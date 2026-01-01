@@ -8,6 +8,10 @@ import {
   AlertTriangle,
   ArrowUp,
   BarChart3,
+  Github,
+  Instagram,
+  Star,
+  User,
   Bell,
   Check,
   Clock,
@@ -29,7 +33,6 @@ import {
   Settings,
   Sun,
   Terminal,
-  User,
   Waves,
   Wifi,
   Zap
@@ -541,19 +544,21 @@ export default function Dashboard() {
       <div className="min-h-screen flex flex-col p-4 md:p-6 transition-all duration-500">
         {/* Header */}
         <header className="flex items-center justify-between mb-8">
-          <div className="flex items-center">
-            <span className="text-4xl md:text-5xl font-bold tracking-wide bg-gradient-to-r from-amber-500 via-orange-500 to-red-500 text-transparent bg-clip-text font-[family-name:var(--font-almendra)]">
+          <div className="flex flex-col -space-y-1">
+            <span className="text-xl md:text-2xl font-semibold tracking-wider bg-gradient-to-r from-cyan-400 to-purple-500 text-transparent bg-clip-text font-[family-name:var(--font-inter)]">
               RISING TRANSFERS
+            </span>
+            <span className="text-sm font-medium text-slate-400 dark:text-slate-500/80 tracking-[0.25em] pl-1 font-[family-name:var(--font-inter)]">
+              SEE IT RISING
             </span>
           </div>
 
           <div className="flex items-center space-x-4 md:space-x-6">
-            <div className="hidden md:flex items-center text-sm font-medium text-slate-500 dark:text-slate-400 cursor-pointer hover:text-cyan-400 dark:hover:text-cyan-400 transition-all duration-200 hover:scale-110 active:scale-90 select-none">
-              <span className="font-[family-name:var(--font-bungee-spice)] text-xl">SUBSCRIBE!</span>
+            <div className="hidden md:flex items-center text-sm font-medium text-slate-400 dark:text-slate-500 cursor-pointer hover:text-cyan-400 dark:hover:text-cyan-400 transition-all duration-200 hover:scale-110 active:scale-90 select-none">
+              <span className="font-[family-name:var(--font-bungee-spice)] font-semibold text-lg bg-gradient-to-r from-orange-500 to-yellow-500 text-transparent bg-clip-text opacity-90">SUBSCRIBE</span>
             </div>
-            <div className="hidden md:flex items-center text-sm font-medium text-slate-500 dark:text-slate-400 cursor-pointer transition-all duration-200 hover:scale-110 active:scale-90 select-none">
-              <Settings className="mr-2 h-4 w-4" />
-              <span className="font-[family-name:var(--font-nabla)] text-lg">Settings</span>
+            <div className="hidden md:flex items-center text-sm font-medium text-slate-400 dark:text-slate-500 cursor-pointer transition-all duration-200 hover:scale-110 active:scale-90 select-none">
+              <Settings className="h-4 w-4" />
             </div>
 
 
@@ -573,7 +578,7 @@ export default function Dashboard() {
                   variant="ghost"
                   size="icon"
                   onClick={() => setTheme("light")}
-                  className={`h-7 w-7 rounded-full transition-all ${theme === "light" ? "bg-amber-100 text-amber-500" : "text-slate-400 hover:text-amber-500"}`}
+                  className={`h-7 w-7 rounded-full transition-all ${theme === "light" ? "bg-slate-200 text-amber-500" : "text-slate-400 hover:text-amber-500"}`}
                 >
                   <Sun className="h-4 w-4" />
                 </Button>
@@ -581,8 +586,8 @@ export default function Dashboard() {
 
               <Avatar className="cursor-pointer hover:opacity-80 transition-opacity" onClick={() => { }}>
                 <AvatarImage src="/user_avatar.png" alt="User" className="object-cover" />
-                <AvatarFallback className="bg-slate-200 text-slate-600 dark:bg-slate-700 dark:text-cyan-500">
-                  <User className="h-5 w-5 text-black" />
+                <AvatarFallback className="bg-slate-100 text-slate-400 dark:bg-slate-800 dark:text-cyan-500/80">
+                  <User className="h-5 w-5" />
                 </AvatarFallback>
               </Avatar>
             </div>
@@ -594,12 +599,12 @@ export default function Dashboard() {
           {/* Center Content - Reconstructed */}
           <div className="col-span-12">
             {/* Hero Chat Section */}
-            <div className="w-full max-w-4xl mx-auto py-12 flex flex-col items-center text-center space-y-8 mb-8">
-              <h2 className="text-5xl md:text-6xl font-bold text-white tracking-tight">
+            <div className="w-full max-w-4xl mx-auto py-8 md:py-10 flex flex-col items-center text-center space-y-6 mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 font-[family-name:var(--font-iceland)]">RT Assistant</span>
               </h2>
 
-              <div className="w-full max-w-2xl shadow-2xl shadow-cyan-500/10 rounded-2xl">
+              <div className="w-full max-w-2xl">
                 <ChatInput />
               </div>
             </div>
@@ -610,7 +615,7 @@ export default function Dashboard() {
               {/* Custom Image Card */}
               <div
                 onClick={() => { }}
-                className="relative group overflow-hidden rounded-lg border border-slate-800 bg-black p-6 h-64 hover:scale-105 transition-all duration-300 shadow-lg shadow-cyan-900/20 cursor-pointer"
+                className="relative group overflow-hidden rounded-lg border border-slate-800 bg-black p-6 h-64 hover:scale-105 transition-all duration-300 shadow-xl shadow-cyan-500/30 hover:shadow-cyan-400/50 ring-1 ring-cyan-500/20 cursor-pointer"
               >
                 <div
                   className="absolute inset-0 bg-cover bg-center opacity-80 transition-opacity group-hover:opacity-60"
@@ -624,7 +629,7 @@ export default function Dashboard() {
               {/* Custom Black Card - Semenyo */}
               <div
                 onClick={() => { }}
-                className="relative group overflow-hidden rounded-lg border border-slate-800 bg-black p-6 h-64 hover:scale-105 transition-all duration-300 shadow-lg shadow-cyan-900/20 flex flex-col justify-end cursor-pointer"
+                className="relative group overflow-hidden rounded-lg border border-slate-800 bg-black p-6 h-64 hover:scale-105 transition-all duration-300 shadow-xl shadow-cyan-500/30 hover:shadow-cyan-400/50 ring-1 ring-cyan-500/20 flex flex-col justify-end cursor-pointer"
               >
                 <div
                   className="absolute inset-0 bg-cover bg-center opacity-80 transition-opacity group-hover:opacity-60"
@@ -636,7 +641,7 @@ export default function Dashboard() {
               {/* Custom Black Card - Sigur */}
               <div
                 onClick={() => { }}
-                className="relative group overflow-hidden rounded-lg border border-slate-800 bg-black p-6 h-64 hover:scale-105 transition-all duration-300 shadow-lg shadow-cyan-900/20 flex flex-col justify-end cursor-pointer"
+                className="relative group overflow-hidden rounded-lg border border-slate-800 bg-black p-6 h-64 hover:scale-105 transition-all duration-300 shadow-xl shadow-cyan-500/30 hover:shadow-cyan-400/50 ring-1 ring-cyan-500/20 flex flex-col justify-end cursor-pointer"
               >
                 <div
                   className="absolute inset-0 bg-cover bg-center opacity-80 transition-opacity group-hover:opacity-60"
@@ -649,7 +654,7 @@ export default function Dashboard() {
               {/* Custom Black Card - Kaiki */}
               <div
                 onClick={() => { }}
-                className="relative group overflow-hidden rounded-lg border border-slate-800 bg-black p-6 h-64 hover:scale-105 transition-all duration-300 shadow-lg shadow-cyan-900/20 flex flex-col justify-end cursor-pointer"
+                className="relative group overflow-hidden rounded-lg border border-slate-800 bg-black p-6 h-64 hover:scale-105 transition-all duration-300 shadow-xl shadow-cyan-500/30 hover:shadow-cyan-400/50 ring-1 ring-cyan-500/20 flex flex-col justify-end cursor-pointer"
               >
                 <div
                   className="absolute inset-0 bg-cover bg-center opacity-80 transition-opacity group-hover:opacity-60"
@@ -661,7 +666,7 @@ export default function Dashboard() {
               {/* Custom Black Card - Samardzić */}
               <div
                 onClick={() => { }}
-                className="relative group overflow-hidden rounded-lg border border-slate-800 bg-black p-6 h-64 hover:scale-105 transition-all duration-300 shadow-lg shadow-cyan-900/20 flex flex-col justify-end cursor-pointer"
+                className="relative group overflow-hidden rounded-lg border border-slate-800 bg-black p-6 h-64 hover:scale-105 transition-all duration-300 shadow-xl shadow-cyan-500/30 hover:shadow-cyan-400/50 ring-1 ring-cyan-500/20 flex flex-col justify-end cursor-pointer"
               >
                 <div
                   className="absolute inset-0 bg-cover bg-center opacity-80 transition-opacity group-hover:opacity-60"
@@ -673,7 +678,7 @@ export default function Dashboard() {
               {/* Custom Black Card - Álvaro Fernandez */}
               <div
                 onClick={() => { }}
-                className="relative group overflow-hidden rounded-lg border border-slate-800 bg-black p-6 h-64 hover:scale-105 transition-all duration-300 shadow-lg shadow-cyan-900/20 flex flex-col justify-end cursor-pointer"
+                className="relative group overflow-hidden rounded-lg border border-slate-800 bg-black p-6 h-64 hover:scale-105 transition-all duration-300 shadow-xl shadow-cyan-500/30 hover:shadow-cyan-400/50 ring-1 ring-cyan-500/20 flex flex-col justify-end cursor-pointer"
               >
                 <div
                   className="absolute inset-0 bg-cover bg-center opacity-80 transition-opacity group-hover:opacity-60"
@@ -683,6 +688,69 @@ export default function Dashboard() {
                 <h3 className="relative z-10 text-2xl font-bold text-white mb-1">Álvaro Fernandez to Deportivo La Coruña</h3>
               </div>
             </div>
+            {/* Footer */}
+            {/* Footer */}
+            <footer className="mt-32 pt-16 pb-8 border-t border-slate-200/60 dark:border-slate-800/50 bg-slate-50 dark:bg-zinc-900 text-slate-900 dark:text-slate-400 text-sm -mx-4 md:-mx-6 px-4 md:px-6">
+              <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10">
+                {/* Branding */}
+                <div className="flex flex-col -space-y-1">
+                  <span className="text-xl md:text-2xl font-semibold tracking-wider bg-gradient-to-r from-cyan-500 to-purple-600 dark:from-cyan-400 dark:to-purple-500 text-transparent bg-clip-text font-[family-name:var(--font-inter)]">
+                    RISING TRANSFERS
+                  </span>
+                  <span className="text-xs font-medium text-slate-400/80 dark:text-slate-500/60 tracking-[0.3em] pl-1 font-[family-name:var(--font-inter)]">
+                    SEE IT RISING
+                  </span>
+                </div>
+
+                {/* Instagram */}
+                <div className="flex flex-col space-y-3">
+                  <h4 className="text-xs font-medium text-slate-500 uppercase tracking-widest">Instagram</h4>
+                  <a
+                    href="https://www.instagram.com/leo.li10"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center space-x-2 text-slate-700 dark:text-slate-400 hover:text-cyan-600 dark:hover:text-cyan-500 transition-colors duration-200 select-none group"
+                  >
+                    <Instagram className="h-4 w-4 opacity-70 group-hover:opacity-100 transition-opacity" strokeWidth={2} />
+                    <span className="font-medium">@leo.li10</span>
+                  </a>
+                </div>
+
+                {/* X */}
+                <div className="flex flex-col space-y-3">
+                  <h4 className="text-xs font-medium text-slate-500 uppercase tracking-widest">X</h4>
+                  <a
+                    href="https://x.com/leooolili"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center space-x-2 text-slate-700 dark:text-slate-400 hover:text-cyan-600 dark:hover:text-cyan-500 transition-colors duration-200 select-none group"
+                  >
+                    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-4 w-4 fill-current opacity-70 group-hover:opacity-100 transition-opacity">
+                      <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
+                    </svg>
+                    <span className="font-medium">@leooolili</span>
+                  </a>
+                </div>
+
+                {/* GitHub */}
+                <div className="flex flex-col space-y-3">
+                  <h4 className="text-xs font-medium text-slate-500 uppercase tracking-widest">Github</h4>
+                  <a
+                    href="https://github.com/leoleolili"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center space-x-2 text-slate-700 dark:text-slate-400 hover:text-cyan-600 dark:hover:text-cyan-500 transition-colors duration-200 select-none group"
+                  >
+                    <Github className="h-4 w-4 opacity-70 group-hover:opacity-100 transition-opacity" strokeWidth={2} />
+                    <span className="font-medium">@leoleolili</span>
+                  </a>
+                </div>
+              </div>
+
+              <div className="mt-16 pt-8 border-t border-slate-200/60 dark:border-slate-800/50 text-center text-slate-500 dark:text-slate-500 text-xs font-medium">
+                © 2025 Rising Transfers
+              </div>
+            </footer>
           </div>
         </div>
       </div>

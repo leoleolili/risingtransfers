@@ -75,7 +75,7 @@ export default function ChatInput() {
         <div className="relative w-full">
             <form onSubmit={handleSubmit} className="relative">
                 <div
-                    className="border rounded-2xl p-4 relative transition-all duration-500 ease-in-out overflow-hidden bg-white border-slate-200 dark:bg-zinc-900/60 dark:border-zinc-700/50 shadow-sm dark:shadow-none backdrop-blur-md"
+                    className="border rounded-2xl p-5 md:p-6 relative transition-all duration-500 ease-in-out overflow-hidden bg-white border-slate-300/80 dark:bg-zinc-900/60 dark:border-zinc-700/50 shadow-[0_0_30px_-10px_rgba(6,182,212,0.3)] dark:shadow-[0_0_40px_-10px_rgba(6,182,212,0.4)] backdrop-blur-md"
                 >
                     {isRecording ? (
                         <div className="flex items-center justify-between h-12 animate-in fade-in-0 slide-in-from-top-2 duration-500 w-full">

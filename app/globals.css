@@ -70,7 +70,16 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
+  }
+
+  html {
+    background-color: white;
+  }
+
+  html.dark {
+    background-color: black;
   }
 }
