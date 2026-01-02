@@ -546,7 +546,7 @@ export default function Dashboard() {
         <header className="flex items-center justify-between mb-8">
           <div className="flex flex-col -space-y-1">
             <span className="text-xl md:text-2xl font-semibold tracking-wider bg-gradient-to-r from-cyan-400 to-purple-500 text-transparent bg-clip-text font-[family-name:var(--font-inter)]">
-              RISING TRANSFERS
+              RISING TRANSFERS<span className="text-[0.3em] align-top ml-0.5 opacity-80">®</span>
             </span>
             <span className="text-sm font-medium text-slate-400 dark:text-slate-500/80 tracking-[0.25em] pl-1 font-[family-name:var(--font-inter)]">
               SEE IT RISING
@@ -695,7 +695,7 @@ export default function Dashboard() {
                 {/* Branding */}
                 <div className="flex flex-col -space-y-1">
                   <span className="text-xl md:text-2xl font-semibold tracking-wider bg-gradient-to-r from-cyan-500 to-purple-600 dark:from-cyan-400 dark:to-purple-500 text-transparent bg-clip-text font-[family-name:var(--font-inter)]">
-                    RISING TRANSFERS
+                    RISING TRANSFERS<span className="text-[0.3em] align-top ml-0.5 opacity-80">®</span>
                   </span>
                   <span className="text-xs font-medium text-slate-400/80 dark:text-slate-500/60 tracking-[0.3em] pl-1 font-[family-name:var(--font-inter)]">
                     SEE IT RISING
